@@ -1,0 +1,32 @@
+div.Users{
+  margin-top: 10px;
+}
+div.User {
+  width: 100%;
+  height: 90px;
+  display: flex;
+}
+div.User img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 5px;
+}
+div.User ul {
+  width: 100em;
+  height: 100%;
+  list-style: none;
+  position: relative;
+}
+div.User ul li {
+  margin: 20px;
+  text-indent: 10px
+}
+div.User ul img.add_friend{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}

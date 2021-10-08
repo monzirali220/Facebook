@@ -1,0 +1,81 @@
+body {
+  font-size: 15pt;
+}
+
+header.header {
+  width: 100%;
+  height: 50px;
+  background-color: #858EE9;
+  position: relative;
+}
+
+header.header img {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  transform: rotateY(180deg);
+}
+
+main.main {
+  width: 100%;
+  min-height: 10em;
+}
+
+.commint_container {
+  width: 100%;
+  min-height: 60px;
+  position: relative;
+  margin-top: 10px;
+}
+
+.commint {
+  width: 250px;
+  height: 100%;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 0 10px;
+  background-color: #f4f4f4;
+  border: 1px solid gray;
+}
+
+.commint .commint_author {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #000;
+}
+
+.commint .commint_author img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.commint .commint_author ul {
+  list-style: none;
+  margin: 0 10px;
+}
+
+.commint .commint_author ul li {
+  width: 120pt;
+  padding: 0 5px;
+}
+
+footer.footer {
+  width: 100%;
+  height: 40px;
+}
+
+footer.footer input {
+  width: 87%;
+  height: 100%;
+  margin-left: 1%;
+}
+
+footer.footer button {
+  width: 10%;
+  height: 100%;
+}

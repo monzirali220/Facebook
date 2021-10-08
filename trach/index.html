@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    function change(input){
+      input.form.submit()
+    }
+  </script>
+  <title>profile</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="profile-images">
+    <img src="IMG_-a7snac.jpg" class="big" alt="">
+    <div class="img">
+      <img src="IMG_-a7snac.jpg" class="profile-image" alt="" />
+    <form action="" method="get" enctype="multipart/form-data" accept-charset="utf-8">
+      <label for="small-profile-image-ch"><div class="change-image"><img src="ic_camera.png"></div></label>
+      <input type="file" name="profile-image" hidden id="small-profile-image-ch" oncick="change(this);"/>
+      <input type="hidden" name="kind" value="small">
+    </form>
+    </div>
+    <form action="" method="get" enctype="multipart/form-data" accept-charset="utf-8">
+      <label for="big-profile-image-ch"><div class="change-image"><img src="ic_camera.png"></div></label>
+      <input type="file" id="big-profile-image-ch" name="profile-image" onchange="change(this);" hidden id="profile-image"/>
+      <input type="hidden" name="kind" value="big">
+    </form>
+  </div>
+  <div class="author">
+    <h3>Monzir Ali</h3>
+  </div>
+  <div class="posts">
+    
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>

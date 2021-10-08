@@ -1,0 +1,41 @@
+$primary-color: #6F42DB;
+$primary-text-color : #f4f4f4;
+$bg-color: #fff;
+
+$max-width: 500px;
+
+$primary-font: Helvetica, Arial,sans-serif;;
+@import "buttons";
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: $primary-font;
+  background-color: $bg-color;
+}
+header {
+  width: 100%;
+  height: 50px;
+  background-color: $primary-color;
+  color: text-color($primary-color);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  h4 {
+    height: 30px;
+  }
+}
+
+main {
+  width: 100vw;
+  max-width: $max-width;
+  margin: auto;
+  color: text-color($bg-color)
+}

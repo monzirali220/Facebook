@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML</title>
+  <link rel="stylesheet" href="commint.css">
+  <link rel="stylesheet" href="poster.css" type="text/css" media="all" />
+  <script type="text/javascript" charset="utf-8">
+    let uid = < ? php echo $_SESSION["Login"]["id"]; ? > ;
+    let pid = < ? php echo $_GET["pid"]; ? >
+
+    function find(target) {
+      return document.querySelector(target)
+    }
+
+    function send() {
+      $ajax({
+        url: 'app/index.php',
+        type: 'POST',
+        dataType: 'json',
+        data: { "opration": "make-commint", "uid": uid, "pid": pid, "commint": find('input').value },
+        success: function(respons) {
+          alert(respons);
+        },
+        error: function(error) {
+          alert(error);
+        }
+      })
+    }
+  </script>
+</head>
+
+<body>
+  <header class="header">
+    <img src="icons/ic_back.png" onclick="window.location.back();" />
+  </header>
+  <div class="post">
+    <header class="post-h">
+      <div class="more"><img src="icons/ic_more.png" alt=""></div>
+      <div class="auther">
+        <a href="/profile.php?id='.$author['Id'].'"><img src="data:image;base64"></a>
+        <ul>
+          <li><strong>firstName lastName</strong></li>
+          <li><small>publish_date</small></li>
+        </ul>
+      </div>
+    </header>
+    <main class="post-m">
+      <div class="post-content">
+      </div>
+      <div onclick="ful_view_image(this);"><img src="data:image;base64," alt="" class="post-image"></div>
+    </main>
+    <footer class="post-f">
+      <ul>
+        <li><a href="#"><img src="icons/ic_reply.png" alt="" /></a></li>
+        <li><img src="icons/ic_comment_grey600_24dp.png" class="commint" alt="" /></li>
+        <li><a href="/app/?opration=like&uid=&pid="><img src="icons/like-icon-0.png" alt="" /></a></li>
+      </ul>
+    </footer>
+  </div>
+  <main class="main">
+    <div class="commint_container">
+      <div class="commint">
+        <div class="commint_author">
+          <img src="IMG_20210603_174832.jpg" alt="">
+          <ul>
+            <li>name</li>
+            <li><small>date</small></li>
+          </ul>
+        </div>
+        <div class="commint_content">
+          gkjssrtf
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <input type="text" id="input" value="" placeholder="commint" />
+    <button type="button" onclik="send();">send</button>
+  </footer>
+  <script src="main.js"></script>
+</body>
+
+</html>

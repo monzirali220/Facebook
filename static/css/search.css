@@ -1,0 +1,22 @@
+* {
+  padding: 0;
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+main.body {
+  width: 100%;
+  min-height: 100vh;
+}
+main.body .form{
+  width: 80%;
+  margin: auto;
+  padding-top: 10px;
+  display: flex;
+}
+main.body .form input {
+  width: 90%;
+  height: 30px;
+  margin: auto;
+  border: 1px solid gray;
+}

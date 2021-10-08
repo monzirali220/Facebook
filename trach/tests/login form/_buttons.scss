@@ -1,0 +1,107 @@
+
+@function text-color($bg-color){
+  @if(lightness($bg-color) > 60){
+    @return #000;
+  }@else{
+    @return #fff;
+  }
+}
+
+.m-auto{
+  margin: auto;
+}
+
+.mx-auto{
+  margin: 0 auto;
+}
+
+.my-auto{
+  margin: auto 0;
+}
+.form-contral {
+  width: 100%;
+  input {
+    width: 100%;
+    height: 30px;
+    border: none;
+    text-indent: 10px;
+    background-color: #f4f4f4; 
+    border-bottom: 1px solid gray;
+  }
+}
+
+
+
+.btn {
+  min-width: 6em;
+  height: 30px;
+  border: none;
+  text-align: center;
+  background-color: $primary-text-color;
+  color: text-color($primary-text-color);
+  border-radius: 10px;
+}
+.btn-primary{
+  background-color: $primary-color;
+  color: text-color($primary-color)
+}
+
+
+$steps : (1,2,3,4,5,6);
+@each $step in  $steps{
+  .m-#{$step}{
+    margin: #{$step * 10}px;
+  }
+  .mt-#{$step} {
+    margin-top: #{$step * 10}px;
+  }
+  .mb-#{$step} {
+    margin-bottom: #{$step * 10}px;
+  }
+  .ml-#{$step} {
+    margin-left: #{$step * 10}px;
+  }
+  .mr-#{$step} {
+    margin-right: #{$step * 10}px;
+  }
+  .mx-#{$step}{
+    margin: 0 #{$step * 10}px;
+  }
+  .my-#{$step}{
+    margin: #{$step * 10}px 0;
+  }
+  
+  
+  .p-#{$step}{
+    padding: #{$step * 10}px;
+  }
+  .pt-#{$step} {
+    padding-top: #{$step * 10}px;
+  } 
+  .pb-#{$step} {
+    padding-bottom: #{$step * 10}px;
+  }
+  .pl-#{$step} {
+    padding-left: #{$step * 10}px;
+  }
+  .pr-#{$step} {
+    padding-right: #{$step * 10}px;
+  }
+  .px-#{$step}{
+    padding: 0 #{$step * 10}px;
+  }
+  .py-#{$step}{
+    padding: #{$step * 10}px 0;
+  }
+  
+}
+$w-steps: (1,2,3,4,5,6,7,8,9,10);
+@each $step in $w-steps{
+  .w-#{$step * 10}{
+    width: #{$step * 10%};
+  }
+  .bor-rad-#{$step * 10}{
+    border-radius: #{$step *10%};
+  }
+}
+

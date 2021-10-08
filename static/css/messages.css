@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  min-height: 100vh;
+}
+body{
+  height: 100%
+}
+header {
+  width: 100%;
+  height: max-content;
+  background-color: blue;
+  position: absolute;
+  top: 0
+}
+div.User {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  border-bottom: 1px solid gray;
+}
+div.User img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 5px 0 5px 5px;
+}
+div.User ul {
+  width: 100vw;
+  height: 60px;
+  list-style: none;
+  margin-top: 2px;
+}
+div.User ul li {
+  max-height: 50%;
+  width: 100%;
+}
+div.User ul li small {
+  font-size: x-small
+}
+main {
+  min-height: 100vh;
+  margin-top: 60px;
+}
+footer{
+  width: 100%;
+  height: 40px;
+  text-align: center; 
+}
+footer input{
+  width: 88%;
+  height: 90%;
+}
+footer button {
+  width: 10%;
+  height: 90%;
+}
+
+main .message {
+      width: 98%;
+      min-height: 60px;
+      position: relative;
+      margin: auto;
+      margin-bottom: 10px;
+    }
+
+    main .message ul {
+      width: 150px;
+      position: absolute;
+      top: 0;
+      list-style: none;
+      padding: 0;
+    }
+
+    main .message ul.me {
+      right: 10px;
+      border-radius: 10px 0 0 10px;
+      background-color: #4351EC;
+    }
+
+    main .message ul.him {
+      left: 10px;
+      border-radius: 0 10px 10px 0;
+      background: #D8D8D8
+    }
+
+    main .message ul li {
+      width: 100%;
+      height: max-content;
+      text-indent: 5px
+    }
+    main .message ul li.content {
+      border-top: 1px solid #000;
+      color: #fff;
+    }
+    main .message ul li small{
+      font-size: x-small;
+    }

@@ -1,0 +1,35 @@
+
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="static/css/init.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="static/css/base.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="static/css/poster.css" type="text/css" media="all" />
+  <title>facebook</title>
+  <script type="text/javascript" charset="utf-8">
+    function setUrl(elim){
+      window.location=window.location.protocol+'//'+window.location.host+"/?page="+elim.dataset.url
+    }
+  </script>
+</head>
+
+<body>
+  <?php
+  if(isset($_GET['page'])){
+    $page = $_GET['page'];
+  }else{
+    $page = 'home';
+  }
+  ?>
+  <header class="navbar">
+    <ul class="nav-ul">
+      
+      <li class="nav-li <?php if($page=='minu'){echo 'selected';  }?>" data-url="logout" onclick="setUrl(this);"><img src=""></li>
+      <li class="nav-li <?php if($page=='search'){echo 'selected'; }?>" data-url="search" onclick="setUrl(this);"><img src="static/icons/"></li>
+      <li class="nav-li <?php if($page=='message'){echo 'selected'; }?>" data-url="message" onclick="setUrl(this);"><img src="static/icons/text-message-2416241-2030716.png"></li>
+      <li class="nav-li <?php if($page=='friends'){echo 'selected';} ?>" data-url="friends" onclick="setUrl(this);"><img src="static/icons/friends-icon-png-3.png"></li>
+      <li class="nav-li <?php if($page=='home'){echo 'selected';} ?>" data-url="home" onclick="setUrl(this);"><img src="static/icons/blue_home.png"></li>
+    </ul>
+  </header>
+  <main class="body">
